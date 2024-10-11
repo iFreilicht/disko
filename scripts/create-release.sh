@@ -31,8 +31,8 @@ if [[ -n "$uncommited_changes" ]]; then
   echo -e "There are uncommited changes, exiting:\n${uncommited_changes}" >&2
   exit 1
 fi
-git pull git@github.com:nix-community/disko master
-unpushed_commits=$(git log --format=oneline origin/master..master)
+git pull git@github.com:iFreilicht/disko master
+unpushed_commits=$(git log --format=oneline iFreilicht/master..master)
 if [[ "$unpushed_commits" != "" ]]; then
   echo -e "\nThere are unpushed changes, exiting:\n$unpushed_commits" >&2
   exit 1
